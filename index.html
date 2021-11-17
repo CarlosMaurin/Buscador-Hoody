@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoody</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         body{
             font-size: 14px;
@@ -34,7 +35,28 @@
         a:hover{
             text-decoration: underline;
         }
+
+        /* CLASES */
+        .menu{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            }
+        .menu-item{
+            margin: 5px 10px;
+        }
+        .centrar{
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            margin-top: 8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .barra_busqueda{
+            width: 90%;
             margin: 15px;
             padding: 5px 10px;
             display:flex;
@@ -44,27 +66,45 @@
             border-style: solid;
             border-color: lightgrey;
         }
-        .lupa{
-            padding: 5px 2px;
+        .icon{
+            display: grid;
+            align-content: center;
+            color: grey;
+        }
+        .profile{
+            border-radius: 50px;
+
+        }
+        #button{
+            margin-top: 15px;
+            width: 270px;
+            display: flex;
+            justify-content: space-between;
         }
     </style>
 </head>
 <body>
-    <header>
-        <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></li>
-        <a href="https://www.google.com.ar/imghp?hl=es-419&ogbl">Imágenes</a></li>
-        <span>icono</span>
-        <img src="./images/hoody-profile.png" alt="hoody-profile" width="30">
-        
+    <header class="menu">
+        <a href="https://mail.google.com/mail/u/0/#inbox" class="menu-item">Gmail</a></li>
+        <a href="https://www.google.com.ar/imghp?hl=es-419&ogbl" class="menu-item">Imágenes</a></li>
+        <div class="material-icons menu-item">
+            <span class="material-icons-outlined">apps</span>
+        </div>
+        <img src="./images/hoody-profile.png" alt="hoody-profile" width="30" class="menu-item profile">
+    </header>    
     <main>
-        <div>
+        <div class="centrar">
             <img src="./images/hoody-logo.png" alt="hoody-logo" width="400">
             <div class="barra_busqueda">
-                <span class="lupa">icon1</span>
+                <div class="material-icons icon">
+                    <span class="material-icons-outlined">search</span>
+                </div>
                 <input type="text" class="" id="">
-                <span>icon2</span>
+                <div class="material-icons icon">
+                    <span class="material-icons-outlined">mic</span>
+                </div>
             </div>
-            <div>
+            <div id="button">
                 <button>Buscar con Hoody</button>
                 <button>Me siento con suerte</button>
             </div>
@@ -73,6 +113,6 @@
         </div>
     </main>
 
-    </header>
+    
 </body>
 </html>
